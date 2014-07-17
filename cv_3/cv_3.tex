@@ -2,11 +2,12 @@
 
 \usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Document margins
 
-\usepackage{marvosym} % Required for symbols in the colored box
+\usepackage{fontawesome}
 \usepackage{ifsym} % Required for symbols in the colored box
 
 \usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
 
+\usepackage{array}
 % Fonts and tweaks for XeLaTeX
 \usepackage{fontspec,xltxtra,xunicode}
 \defaultfontfeatures{Mapping=tex-text}
@@ -39,6 +40,14 @@
 \scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
 
 \titlespacing{\section}{0pt}{0pt}{5pt} % Spacing around titles
+%FontAwesome icons
+\newfontfamily{\FA}{FontAwesome Regular}
+\def\twitter{{\FA \faTwitter}}
+\def\phone{{\FA \faPhone}}
+\def\envelope{{\FA \faEnvelope}}
+\def\home{{\FA \faHome}}
+\def\github{{\FA \faGithub}}
+\def\globe{{\FA \faGlobe}}
 
 \begin{document}
 
@@ -141,15 +150,17 @@
 %	COLORED BOX
 %----------------------------------------------------------------------------------------
 
-\colorbox{shade}{\textcolor{text1}{
-\begin{tabular}{c|p{7cm}}
-\raisebox{-4pt}{\textifsymbol{18}} & 322 Melwood Ave, Pittsburgh, PA 15213 \\ % Address
-\raisebox{-3pt}{\Mobilefone} & +1 (412) 6141371 \\ % Phone number
-\raisebox{-1pt}{\Letter} & \href{mailto:xinghu1989@gmail.com}{xinghu1989@gmail.com} \\ % Email address
-\Keyboard & \href{http://www.xinghu-lu.net}{http://www.xinghu-lu.net} \\ % Website
+\colorbox{shade}{\sffamily\textcolor{text1}{
+\begin{tabular}{@{} m{1cm} r m{4.8cm}}
+\smash{\raisebox{-\totalheight}{\includegraphics[width=18mm, height=22.5mm]{Xinghu.JPG}}} 
+& \home & 322 Melwood Ave, PA 15213 \\ % Address
+& \phone & +1~(412)~614~1371 \\ % Phone number
+& \envelope & \href{mailto:xinghu1989@gmail.com}{xinghu1989@gmail.com} \\ % Email address
+& \globe & \href{http://www.xinghu-lu.net}{http://www.xinghu-lu.net} \\ % Website
+& \github & \href{https://github.com/xinghul}{https://github.com/xinghul} \\ % Github
 \end{tabular}
 }
-}\\[10pt]
+}\\[1pt]
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -207,7 +218,7 @@
 
 \section{Computer Skills} 
 
-\begin{tabular}{rl}
+\begin{tabular}{r l}
 Programming Languages
 & \textsc{Java/C\texttt{\#}, C/C\texttt{++}}\\
 & Python, Ruby, SQL\\
@@ -234,16 +245,12 @@ Platforms / Frameworks
 \section{Me \& Games} 
 
 \begin{tabular}{rl}
-\textsc{War3}
-& Won most of the War3 game competitions \\
-& held in the city I used to live at.\\
 \textsc{DotA}
 & Won first place in a countrywide DotA \\
 & competition of southwest area \\
 \textsc{WoW}
 & Ranked the first in the 3v3 ladder of WoW \\
-& arena(Taiwan) with two other classmates,\\
-& with best ranking of 2743 \\
+& arena(Taiwan), with best ranking of 2743 \\
 \textsc{LoL}
 & Ranked top 10 in LoL domestic server \\
 & (Chinese server) at the end of Season 2 \\
